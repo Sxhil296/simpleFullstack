@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 
 //get a list of five fruits
-app.get('/fruits', (req, res) => {
+app.get('/api/fruits', (req, res) => {
     const fruits = [
         {
           "id": 1,
