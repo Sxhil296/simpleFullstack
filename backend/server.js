@@ -2,9 +2,12 @@ import express from "express";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Server is ready!");
-});
+app.use(express.static('dist'))  //middleware
+//middleware is used when dist folder is added to the backend..it is bad practice, changes in the frontend code do not propagate. one should keep backend and frontend code separate
+
+// app.get("/", (req, res) => {
+//   res.send("Server is ready!");
+// });
 
 
 //get a list of five fruits
